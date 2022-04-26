@@ -7,9 +7,9 @@ let username = document.querySelector('.username')
 let userResult = document.querySelector('.user-result')
 let userBmi = document.querySelector('.user-bmi')
 let mainImg = document.querySelector('.main-img')
-let viewBtn = document.querySelector('.right-btn')
 nameInput.focus()
 // Events
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
     let nameValue = nameInput.value.trim()
@@ -41,10 +41,7 @@ form.addEventListener('submit', (e)=>{
     heightInput.value = ''    
 })
 
-// viewBtn.addEventListener('click', ()=>{
-//     mainImg.classList.add('shownav')
 
-// })
 
 
 
