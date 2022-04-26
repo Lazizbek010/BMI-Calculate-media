@@ -9,23 +9,26 @@ a{
 }
 body{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('images/bmicalcu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 .container{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(135deg, rgba(0, 0, 255, 0.7) 0% 50%, rgba(0, 255, 0, 0.7) 50% 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px 20px;
 }
 .container-content{
     width: 1000px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .result-bmi{
     width: 100%;
@@ -46,7 +49,7 @@ body{
 .left{
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
-    border-radius: 8px 0 0 8px;
+    border-radius: 12px 0 0 12px;
     color: #fff;
     padding: 20px;
     backdrop-filter: blur(3px);
@@ -90,7 +93,7 @@ body{
 }
 .right{
     background: transparent;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 12px 12px 0;
     border: 0.5px solid #fff;
     text-align: center;
     padding: 20px;
@@ -170,4 +173,50 @@ body{
     width: 100%;
     background-color: #000;
     color: #fff;
+}
+/*  ===== MEDIA ===== */
+@media(max-width:1041px){
+    .container-content{
+        width: 100%;
+    }
+    .left, .right{
+        width: 50%;
+    }
+    .result-bmi{
+        height: 56%;
+    }
+}
+@media(max-width:850px){
+    .right h1{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width:780px){
+    .left, .right{
+        width: 80%;
+    }
+    .left{
+        border-radius: 12px 12px 0 0;
+    }
+    .right{
+        border-radius: 0 0 12px 12px;
+    }
+    .right h1{
+        font-size: 45px;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width:530px){
+    .left, .right{
+        width: 100%;
+    }
+    .right h1{
+        font-size: 35px;
+    }
+}
+@media(max-width:389px){
+    .right h1{
+        font-size: 25px;
+    }
 }
